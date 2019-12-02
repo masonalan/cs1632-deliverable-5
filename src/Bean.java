@@ -18,7 +18,7 @@ import java.util.Random;
  * skill level.
  */
 
-public class Bean {
+public class Bean implements Comparable<Bean> {
 	// TODO: Add member methods and variables as needed 
 	
 	private static final double SKILL_AVERAGE = 4.5;	// MainPanel.SLOT_COUNT * 0.5;
@@ -103,5 +103,9 @@ public class Bean {
 	public void reset() {
 		this.xCoord = 0;
 		this.spacesToMove = this.skill;
+	}
+
+	public int compareTo(Bean other) {
+		return this.getXPos()-other.getXPos();
 	}
 }

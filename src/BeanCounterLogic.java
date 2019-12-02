@@ -179,6 +179,20 @@ public class BeanCounterLogic {
         }
     }
 
+
+    /**
+     * Removes the individual beans from their slots, on the range [from, to)
+     */
+    public void clearBeans(int from, int to) {
+        ArrayList<Bean> sortedBeans = new ArrayList<>(Arrays.asList(beansInFlight));
+        Collections.sort(sortedBeans);
+        Bean b;
+        for(int i = from; i < to; i++) {
+            b = sortedBeans.get(i);
+            this.beanSlots.get(b.getXPos()).remove(0);
+        }
+    }
+
     /**
      * Removes the lower half of all beans currently in slots, keeping only the
      * upper half.
@@ -192,7 +206,7 @@ public class BeanCounterLogic {
      * Wrapper of above method for external testing
      */
     public void upperHalf() {
-        this.clearSlots(0, this.getSlotHalfPoint());
+        this.clearBeans(0, this.beansInFlight.length/2);
     }
 
     /**
@@ -208,7 +222,7 @@ public class BeanCounterLogic {
      * Wrapper of above method for external testing
      */
     public void lowerHalf() {
-        this.clearSlots(this.getSlotHalfPoint(), this.getBeanSlots().size());
+        this.clearSlots(this.beansInFlight.length/2, this.beansInFlight.length);
     }
 
     public int sendBean(BeanCounterLogic logic) {
