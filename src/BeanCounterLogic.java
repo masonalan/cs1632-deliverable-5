@@ -166,6 +166,13 @@ public class BeanCounterLogic {
         return 0.0;
     }
 
+    /**
+     * Wrapper for above class for external testing
+     */
+    public double getAverageSlotBeanCount() {
+        return getAverageSlotBeanCount(this);
+    }
+
     public void clearSlots(int start, int end) {
         for (int i = start; i < end; i++) {
             this.beanSlots.get(i).clear();
