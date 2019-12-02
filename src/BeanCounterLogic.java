@@ -189,12 +189,26 @@ public class BeanCounterLogic {
     }
 
     /**
+     * Wrapper of above method for external testing
+     */
+    public void upperHalf() {
+        this.clearSlots(0, this.getSlotHalfPoint());
+    }
+
+    /**
      * Removes the upper half of all beans currently in slots, keeping only the
      * lower half.
      */
     public void lowerHalf(BeanCounterLogic logic) {
         // TODO: Implement
         logic.clearSlots(logic.getSlotHalfPoint(), logic.getBeanSlots().size());
+    }
+
+    /*
+     * Wrapper of above method for external testing
+     */
+    public void lowerHalf() {
+        this.clearSlots(this.getSlotHalfPoint(), this.getBeanSlots().size());
     }
 
     public int sendBean(BeanCounterLogic logic) {
@@ -266,6 +280,13 @@ public class BeanCounterLogic {
         boolean clearBeans = false;
 
         logic.reset(logic.getBeansInFlight(), logic, clearBeans);
+    }
+
+    /*
+     * Wrapper of above method for external testing
+     */
+    public void repeat() {
+        repeat(this);
     }
 
     public int moveBean(int slot, Bean bean, BeanCounterLogic logic) {
