@@ -234,7 +234,7 @@ public class BeanCounterLogic {
     }
 
     /**
-     * Wrapper for the above class, for external testing access.
+     * Wrapper for the above method, for external testing access.
      */
     public void reset(Bean[] beans) {
         reset(beans, this, true);
