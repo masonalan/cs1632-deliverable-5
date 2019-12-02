@@ -233,6 +233,13 @@ public class BeanCounterLogic {
         logic.sendBean(logic);
     }
 
+    /**
+     * Wrapper for the above class, for external testing access.
+     */
+    public void reset(Bean[] beans) {
+        reset(beans, this, true);
+    }
+
     public void addSlotBeansToRemaining() {
         // Add beans from every slot to remaining beans
         for (int i = 0; i < this.beanSlots.size(); i++) {
