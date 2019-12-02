@@ -1,0 +1,32 @@
+Checkstyle:
+
+Starting audit...
+[WARN] /Users/arabiajosh/Desktop/cs1632/deliverables/del_5/src/BeanCounterLogic.java:137:5: Missing a Javadoc comment. [JavadocMethod]
+[WARN] /Users/arabiajosh/Desktop/cs1632/deliverables/del_5/src/BeanCounterLogic.java:147:5: Missing a Javadoc comment. [JavadocMethod]
+[WARN] /Users/arabiajosh/Desktop/cs1632/deliverables/del_5/src/BeanCounterLogic.java:174:5: Missing a Javadoc comment. [JavadocMethod]
+[WARN] /Users/arabiajosh/Desktop/cs1632/deliverables/del_5/src/BeanCounterLogic.java:198:5: Missing a Javadoc comment. [JavadocMethod]
+[WARN] /Users/arabiajosh/Desktop/cs1632/deliverables/del_5/src/BeanCounterLogic.java:234:5: Missing a Javadoc comment. [JavadocMethod]
+[WARN] /Users/arabiajosh/Desktop/cs1632/deliverables/del_5/src/BeanCounterLogic.java:253:5: Missing a Javadoc comment. [JavadocMethod]
+[WARN] /Users/arabiajosh/Desktop/cs1632/deliverables/del_5/src/BeanCounterLogic.java:267:5: Missing a Javadoc comment. [JavadocMethod]
+[WARN] /Users/arabiajosh/Desktop/cs1632/deliverables/del_5/src/BeanCounterLogic.java:314:5: Missing a Javadoc comment. [JavadocMethod]
+[WARN] /Users/arabiajosh/Desktop/cs1632/deliverables/del_5/src/BeanCounterLogic.java:327:5: Missing a Javadoc comment. [JavadocMethod]
+[WARN] /Users/arabiajosh/Desktop/cs1632/deliverables/del_5/src/BeanCounterLogic.java:338:5: Missing a Javadoc comment. [JavadocMethod]
+[WARN] /Users/arabiajosh/Desktop/cs1632/deliverables/del_5/src/BeanCounterLogic.java:347:5: Missing a Javadoc comment. [JavadocMethod]
+[WARN] /Users/arabiajosh/Desktop/cs1632/deliverables/del_5/src/MainPanel.java:271: Line is longer than 120 characters (found 121). [LineLength]
+Audit done.
+
+JPF:
+
+sendBeanTestSizeZero(BeanCounterLogicTest): null
+
+!!! - At least one failure, see above.
+
+JUnit:
+
+sendBeanTestSizeZero(BeanCounterLogicTest): null
+
+!!! - At least one failure, see above.
+
+Spotbugs:
+
+M V EI_EXPOSE_REP EI: BeanCounterLogic.getBeansInFlight() may expose internal representation by returning beansInFlight  At BeanCounterLogic.java:[line 74]
