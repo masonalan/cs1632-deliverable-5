@@ -317,6 +317,13 @@ public class BeanCounterLogic {
         return statusChange;
     }
 
+    /**
+     * Wrapper of above method
+     */
+    public boolean advanceStep() {
+        return advanceStep(this);
+    }
+
     public static void showUsage() {
         System.out.print("Usage: java BeanCounterLogic <number of beans> <luck | skill>\n");
         System.out.print("Example: java BeanCounterLogic 400 luck\n");
